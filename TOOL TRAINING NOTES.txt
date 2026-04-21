@@ -1,0 +1,290 @@
+what is our role as a clinical data Associate(Database Analyst 1):-
+------------------------------------------------------------------
+-->we are going to manage or support the clinical databases in the clinical trails.
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like 
+   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
+-->Our Main Role is to:
+     -->Review and Validate patient data.
+     -->Identify errors and raise query's.
+     -->Monitor Adhverse Events.
+     -->clean and finalize data for Analysis.
+
+-->The Current Tool we are using in DBM is "RED CAP CLOUD(RCC)".
+-->The Previous Tool is "ORACLE".
+     -->In this Oracle tool we are having three different Platforms they are:
+             1)Central Designer --> Used for Designing the Components.(forms, rules/edit-checks)
+             2)Inform EDC(Electronic Data Capture) --> used to deploy and data entry in to EDC.
+             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
+
+-->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
+-->what is meant by Protocol:-It is a combination of, below sentences
+       -->what is the study Number..?
+       -->who is the patient..?
+       -->Number of patient's..?
+       -->Criteria
+       -->visits
+       -->Drug Information
+
+-->In Red Cap Cloud(RCC), we are going to work on three things they are:
+         1)Migration -->Transferring data from Oracle to red cap cloud
+         2)Portfolio or new build --> creating the Studies.
+         3)Standard Team --> Managing the forms in a library.
+
+-->REDCAPCLOUD ARCHITECHTURE:-
+   =========================
+    -->In Redcap cloud, there are three major components under single URL, they are:
+                      1)Study Central --> used for designing the Components
+                      2)EDC(Electronic Data Capture) --> used for deployment and data entry
+                      3)A&I Platform -->database
+    -->The Environments and Instances in Redcap cloud are:
+             1) Sandbox Environment(Training Purpose)
+                     Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
+             2) Staging Environment(Application Level Testing)
+                    Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
+             3) Production Environment
+                   Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
+                        
+                             (CDMS-sc.pfizer.com, CDMS-dev.pfizer.com, CDMS-UAT.pfizer.com, CDMS-exec.pfizer.com)
+   
+-->REDCAPCLOUD STRUCTURE:-
+----------------------------
+   -->what is Study..? --> It is  a combination of Alphabets, study Number and Protocol.
+   -->what is Library..?--> It is a Respository where we can copy the forms to Study level.
+        Note: we can't able to create or update Instruments(forms) at the study level.
+      -->There are two types of Libraries they are core library(25 forms) and efficacy library(300+ froms).
+      -->core library contains the most commonly used forms.
+   -->what is study Template..?-->It contains all the predefined feilds of a forms.
+----------------------------------------------------------------------------------------------------------------------------
+-->In sandbox go to profile and click on "change Application" -->change application from Redcapcloud EDC to administration.
+-->Then we can see on right corner there is "ADD" button -->it is used to create the study.
+-->we should know to create the study(study name, study category,brief summary, protocol Id,etc..)
+-->we should know how to create sites and provide roles to the user.
+-->we should know how to create instruments and how to copy instruments from library to study level.
+
+
+CODELISTS:-
+-----------
+-->In RCC, The Pre-defined values are called as Codelists.
+-->In Instruments , go to codelists tab and create codelists by providing the lable and item code.
+-->Once the codelist is done then add it to the instrument variable.
+-->There two types of codelists they are:
+      1)Master Codelist:-
+             -->The Master codelist is a comprehensive list that contains all the terms/Codes of a particular data element.
+      2)Subset Codelist:-
+             -->The subset codelist is derived from master codelist that contains only the specific data element codes/Terms.
+
+
+Steps for creating Instruments,codelists, event definitions and data entry:-
+============================================================================
+-->First Go to created study.
+-->Go to instrument field and enter instrument name(mdes_form_name), instrument title and description.
+-->After that go to instrument variables and add section or group by entering the section name(meds_section_name) and title Name.
+-->After that go to create varible field and select variable type(Control type), label Name, variable name(item_refname), title.
+-->If the variable control type is Radio/Dropdown then Go and create the codelists.(item lable and item code)
+-->After that add that codelist to the Instrument variable.
+-->while creating the variables we need to follow the sequence and check for mde_is_required as "YES".
+-->Now go and creat the study event defintion.
+-->After that add that instrument to the event definition.
+-->Now we can go to subjects feild and enter the sites and subject number and then we can enter the data.
+-->Save and exit that's all.
+
+
+TYPES OF FORMS:-
+-----------------
+-->Flat forms(eg:-SV001,DM001)
+-->Repeating Forms(eg:-AE001)
+-->Forms with repeating logs/sections
+-->forms with fixed repeating logs/sections
+
+Flat Forms:-
+------------
+-->It is a single Level form where each field can appear only once for a visit or subject with no repetition.
+-->ex:- demographic forms
+
+Repeating forms:-
+-----------------
+-->A form that can be entered multiple times for the same (visit or subject) to capture the repeated events.
+-->example:- adverse events forms
+
+Forms with Repeating Sections:-
+-------------------------------
+-->A single form that contains a group of fields that can repeat within the form.
+-->Ex:- concomitent medications
+
+Forms with Fixed Repeating Sections:-
+-------------------------------------
+-->A form that contains a fixed number of repeating sections.
+-->Ex:- Vital signs forms
+
+
+Event Definitions:-
+====================
+-->Event is nothing but a Visit.
+-->we are having some of the events like:
+     1)Static Event-->It is mandatory event to add it to the Study level.
+                   -->It does not require any kind of dynamic condition.
+     2)Scheduled Event-->To Add this event to the Study level we need particular dynamic condition.
+     3)Unscheduled Event-->We can add this event to the study level whenever we required.
+     4)Parent Event
+     5)child Event-->under parent event we need to add this child event and we can add many child events under parent.
+        -->We can add forms only inside the child event
+
+Derivations:-
+===============
+-->Derivations are nothing but deriving the requried values in to the target items based on the conditions.
+(Target Item, Expression, Derivation Title, Derivation Description)
+
+
+Edit-checks or Query Checks or Validations:-
+============================================
+-->The Main Aim of Edit-checks or query chekcks is to provide accurate data for the sites.
+       -->Target Event
+       -->Target Item
+       -->Expression Builder
+       -->Rule Name
+       -->Rule Description
+       -->Action
+       -->Query Type-->(open query(Visible to sites), issue candidate Query(Visible to Manager level Leads))
+       -->Query Category and Query Message
+
+
+Pre-defined Functions in Expression Builder:-
+=============================================
+1)"abs()":- 
+     -->Return the absolute Value of a Number.
+     -->Eg:- abs(arg), abs(-4)=4
+
+2)allobjects():-
+      -->Return an Array with the Provided Value.
+      -->Eg:- allobjects(arg1)
+
+3)array_values():-
+     -->Extract value from the elements in the provided Array.
+     -->Eg:-  array_values(field,subject|event|instrument)
+     -->By default the scope is subject.
+
+4)not():-
+    -->It is going to return the boolean value based on the field we provide.
+    -->eg:- not(true)=false
+            not(false)=true
+
+5)empty():-
+    -->Returns true if the provided value (or) array is empty otherwise false.
+    -->eg:- empty(654736)=false
+            empty([])=true
+            empty("")=true
+
+7)completed():-
+    -->Returns true if the given array size is greater than zero otherwise return false.
+    -->Eg:- completed([1,2,3])=true
+
+8)concatdlm():-
+    -->concatenate the given values by using the provided delimiter.
+    -->eg:- concatdlm(separator,feild1,field2,field3,..)
+            concatdlm("-","one","two")=one-two
+
+9)contains():-
+    -->Rerutns true if the provided value contains the second value otherwise return false.
+    -->Eg:- contains("abc","bc") = true
+
+10)count():-
+    -->Return the Number of elements in the array.
+    -->Eg:- count([1,2,3])=3
+
+11)count_values():-
+    -->The function counts the number of repetitions of the value in the second argument into an array of values of the first argument.
+    -->eg:- count_values(array_values(field),target value)
+
+12)dateadd():-
+    -->add or subtract from the date.
+    -->eg:- dateadd(date,units,quantity,dateformat(YYYY-MM_DD))
+
+13)datediff():-
+    -->Caluculate difference between the dates or times by using the datediff() function.
+    -->eg:- datediff(date1,date2,units,returnsignedvalue,decimalvalues)
+             units:- weeks,days,months,hours,minutes,seconds
+
+14)startswith():-
+     -->Returns true if the first string starts with the second String otherwise return false.
+     -->Eg:- startWith("ABCD","AB")
+
+15)endsWith():-
+     -->Returns true if the first String ends with the second String otherwise return false.
+     -->Eg:- endsWith("ABCD","CD");
+
+16)functions._comparedates():-
+      -->compare two dates, if two dates are equal then it will return "0".
+      -->If First date is before the Second date then it will return "-1".
+      -->If first date is after the second date then it will return "+1".
+      -->Eg:- functions._comparedates(date1,date2)
+
+17)functions._getdatedifference():-
+      -->Return dates difference between two dates in a specific range.
+      -->Eg:- functions._comparedates(date1,date2,"MINUTES"|"HOURS");
+
+18)equals():-
+      -->Return true if both the objects are equal.
+
+19)hasall():-
+     -->This function compares all elements from the collection are equal to the second argument.
+     -->Eg:- hasall([3,3,3])=true
+
+20)hasany():-
+     -->This function checks if the first argument(collection) contains the second argument.
+     -->eg:- hasany([1,2,3],30)=true.
+
+21)min():-
+     -->Return minimum element from the provided array.
+     -->Eg:- min([1,2,3])=1
+
+22)max():-
+     -->Return maximum element from the provided array.
+     -->Eg:-max([1,2,3])=3
+
+23)mean():-
+     -->Return avg of the provided array.
+     -->Eg:- mean([1,2,3])=2
+
+24)sum():-
+     -->Return sum of the elements from the Provided array.
+     -->sum([1,2,3])=6.
+
+25)sqrt():-
+     -->Returns the perfect positive square root of a number.
+     -->sqrt(16)=4
+
+26)indexOf():-
+     -->This function returns the index value of a element in an array.
+    
+27)lenght():-
+     -->This function returns length of the provided object.
+     -->Eg:- length([1,2,3])=3
+
+28)todecimal() and todouble():-
+     -->Returns double value of provided argument.
+     -->Eg:- todecimal("2.23")=2.23
+
+29)toint32():-
+     -->Returns long value of the provided argument.
+    
+30)toString():-
+     -->return string value of the provided argument.
+ 
+31)isnumeric():-
+     -->returns true if the provided argument is numeric.
+---------------------------------------------------------------------------------------------------------------------------------------
+-->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
+-->"n" occurance is mandatory for the repeating forms and repeating logs.
+-->"n" occurance is not mandatory for the flat form.
+-->"r" occurence is used to find out the duplicate fields entered and populate the query message in all the duplicate forms.
+------------------------------------------------------------------------------------------------------------------------------------------
+Branching Logic:-
+==================
+-->It is a dynamic condition 
+
+
+
+
+
+
