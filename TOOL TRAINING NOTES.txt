@@ -1,8 +1,7 @@
 what is our role as a clinical data Associate(Database Analyst 1):-
 ------------------------------------------------------------------
 -->we are going to manage or support the clinical databases in the clinical trails.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like 
-   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
 -->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
 -->Our Main Role is to:
      -->Review and Validate patient data.
@@ -15,7 +14,9 @@ what is our role as a clinical data Associate(Database Analyst 1):-
      -->In this Oracle tool we are having three different Platforms they are:
              1)Central Designer --> Used for Designing the Components.(forms, rules/edit-checks)
              2)Inform EDC(Electronic Data Capture) --> used to deploy and data entry in to EDC.
-             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
+             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that                    data in to DMW.
+
+-->The Purpose of Reda cap cloud is to build EDC for validating the clinical trail data.
 
 -->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
 -->what is meant by Protocol:-It is a combination of, below sentences
@@ -55,7 +56,7 @@ what is our role as a clinical data Associate(Database Analyst 1):-
       -->There are two types of Libraries they are core library(25 forms) and efficacy library(300+ froms).
       -->core library contains the most commonly used forms.
    -->what is study Template..?-->It contains all the predefined feilds of a forms.
-----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 -->In sandbox go to profile and click on "change Application" -->change application from Redcapcloud EDC to administration.
 -->Then we can see on right corner there is "ADD" button -->it is used to create the study.
 -->we should know to create the study(study name, study category,brief summary, protocol Id,etc..)
@@ -273,18 +274,91 @@ Pre-defined Functions in Expression Builder:-
  
 31)isnumeric():-
      -->returns true if the provided argument is numeric.
----------------------------------------------------------------------------------------------------------------------------------------
+
+32)toupper():-
+     -->convert all the lower case characters to the upper case characters.
+---------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
 -->"n" occurance is not mandatory for the flat form.
 -->"r" occurence is used to find out the duplicate fields entered and populate the query message in all the duplicate forms.
-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 Branching Logic:-
 ==================
--->It is a dynamic condition 
+-->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or froms or across the study's.
+-->Nested item will follow the parent child rule but branching logic does not folow the parent child rule it will directly populate a independent
+   Variable separately.
+      -->Traget Item
+      -->Expression
+      -->Branching Logic Name
+      -->Branching Logic Description
+---------------------------------------------------------------------------------------------------------------------------
+SDV(Soruce Data Verification):-
+===============================
+-->Soruce Date Verification is a process of checking that the data recorded in trail documents(CRF) matches the source data records or not.
+      -->Soruce data= hospital records,blood reports,etc..(CRF)
+      -->Trail document(CRF) = where trail data is entered(electronic system).
+-->The Main Purpose of SDV is to ensure accuracy,completeness and reliability of trail data.
+-->For Example, if the patient blood pressure in hosptial records is entered as 120/80, SDV ensure the same value is entered in the ECRF.
+-->Actually Clinical Research Associates will perform this SDV during Monitoring sites.
 
+        Navigations:-
+        -------------
+                  -->In study level,go to parameters.
+                  -->under Data Monitoring Plan ,enable Targeted SDV.
+                  -->In Targeted SDv we can see plans and default plans.
+                  -->Go and create a plan and add instruments to that plan.
+                  -->Now we can see SDV Strategies and create  one SDV Stratergy.
+                  -->Now enroll a new subject and by default it will be in ineligible make it to eligible by using Trigger                      form.
+                  -->Now do the data entry.
+---------------------------------------------------------------------------------------------------------------------------
+Clinical Models:-
+================
+-->Clinical Models are used to organize the data in a proper Tabular Forms.
+-->All the Tabular forms what we created s will be under one universal Data Model Nothing SRDM(Standard Review Data Model)
+-->Navigations:-
+    -->Study Level
+    -->Clinical Models
+    -->Tables(create table and variables)
+    -->Mapping defintions
+    -->Common Variables
+-->SRDM stands for Standard Review Data Model.
+-->Extened Attributes:-
+     -->AETERM(text) -->AETERM_ND(not done)
+     -->AESTDTC(Date)
+            -->AESTDTC_ND
+            -->AESTDTC_DTR(stores UNK)
+            -->AESTDTC_DTS(stroes standard Date Format(YYYY_MM_DD)
+     -->AESCAT(codelist)
+           -->AESCAT_ND
+           -->AESCAT_C(store Item code)
+---------------------------------------------------------------------------------------------------------------------------
+Dynamic Expressions:-
+=====================
+-->Dynamic Expressions are used to trigger the events (or) instruments based on certain conditions.
+-->There are three types of Dynamic Expressions in RCC they are:
+    -->Create Dependent Event
+    -->Create Dynamic Event
+    -->Add Instrument
+-->"Create Dependent Event" is used to trigger the parent and child events based on certain Conditions.
+-->"Create Dynamic Event" is used to trigger the Events based on certain Conditions.
+-->"Add Instrument" is used to trigger the "n" number of instruments into a particular event or "n" different events based on a certain condition.
 
-
-
-
-
+      -->In Rules,
+            Action TYpe:-
+                   -->create dependent Event
+                   -->Create Dynamic Event
+                   -->Add Instrument
+---------------------------------------------------------------------------------------------------------------------------
+Study Versions and Migration Plans:-
+====================================
+-->If we Deploy our Package or study  through study version and if we make any updates to that package those updates will not be visible to the old subjects
+   they will visible to the new subjects only.
+-->If we Deploy our package with the help of Migration plan then whatever the updates we did they will be available to both old and new subjects.
+---------------------------------------------------------------------------------------------------------------------------
+Constants and Dynamic Constants:-
+=================================
+-->Constants are nothing but static values.
+-->Dynamic constants are nothing changing the values based on certain requirement.
+-->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
+---------------------------------------------------------------------------------------------------------------------------
