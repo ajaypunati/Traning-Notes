@@ -1,12 +1,13 @@
 what is our role as a clinical data Associate(Database Analyst 1):-
 ------------------------------------------------------------------
 -->we are going to manage or support the clinical databases in the clinical trails.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like 
+   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
 -->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
 -->Our Main Role is to:
      -->Review and Validate patient data.
      -->Identify errors and raise query's.
-     -->Monitor Adhverse Events.
+     -->Monitor Adverse Events.
      -->clean and finalize data for Analysis.
 
 -->The Current Tool we are using in DBM is "RED CAP CLOUD(RCC)".
@@ -14,9 +15,12 @@ what is our role as a clinical data Associate(Database Analyst 1):-
      -->In this Oracle tool we are having three different Platforms they are:
              1)Central Designer --> Used for Designing the Components.(forms, rules/edit-checks)
              2)Inform EDC(Electronic Data Capture) --> used to deploy and data entry in to EDC.
-             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that                    data in to DMW.
+             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
 
+what is the purpose of "RCC"..?
+---------------------------------
 -->The Purpose of Reda cap cloud is to build EDC for validating the clinical trail data.
+---------------------------------------------------------------------------------------------------------------------------
 
 -->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
 -->what is meant by Protocol:-It is a combination of, below sentences
@@ -277,6 +281,9 @@ Pre-defined Functions in Expression Builder:-
 
 32)toupper():-
      -->convert all the lower case characters to the upper case characters.
+
+33)dateextract(date,units):-
+     -->This Methods extracts Months or years or days or minutues or hours from the given date.
 ---------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
@@ -286,7 +293,7 @@ Pre-defined Functions in Expression Builder:-
 Branching Logic:-
 ==================
 -->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or froms or across the study's.
--->Nested item will follow the parent child rule but branching logic does not folow the parent child rule it will directly populate a independent
+-->Nested item will follow the parent child rule but branching logic does not folslow the parent child rule it will directly populate a independent
    Variable separately.
       -->Traget Item
       -->Expression
@@ -362,3 +369,6 @@ Constants and Dynamic Constants:-
 -->Dynamic constants are nothing changing the values based on certain requirement.
 -->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
 ---------------------------------------------------------------------------------------------------------------------------
+
+
+
