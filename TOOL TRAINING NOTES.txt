@@ -1,7 +1,8 @@
 what is our role as a clinical data Associate(Database Analyst 1):-
 ------------------------------------------------------------------
 -->we are going to manage or support the clinical databases in the clinical trails.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like 
+   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
 -->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
 -->Our Main Role is to:
      -->Review and Validate patient data.
@@ -20,7 +21,6 @@ what is the purpose of "RCC"..?
 ---------------------------------
 -->The Purpose of Reda cap cloud is to build EDC for validating the clinical trail data.
 ---------------------------------------------------------------------------------------------------------------------------
-
 -->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
 -->what is meant by Protocol:-It is a combination of, below sentences
        -->what is the study Number..?
@@ -48,15 +48,15 @@ what is the purpose of "RCC"..?
                   -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->
                      Production/Execution
 
-                -->In Study Central Instance, It is Composed with two portals they are Administration portal and Red cap                      cloud EDC.
-                -->In Administration Portal, we are going to Provide Study Access,Instance Access, Platform Access and                        Role Permissions,sites.
-                -->In Study Central EDC, we are going to build Activities like Templates,Libraries,Codelists,Clinical                         Models,SDV,Expressions,many more...                
+                -->In Study Central Instance, It is Composed with two portals or two sub domainss they are Administration portal and Red cap cloud EDC.
+                -->In Administration Portal, we are going to Provide Study Access,Instance Access, Platform Access and Role Permissions,sites.
+                -->In Study Central EDC, we are going to build Activities like Templates,Libraries,Codelists,Clinical Models,SDV,Expressions,many more...                
 
              2) Staging Environment(Application Level Testing)
 
                    -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
 
-             3) Production Environment
+             3) Production Environment(Reserved for Live Tracking of Clinical Data)
 
                    -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
                         
