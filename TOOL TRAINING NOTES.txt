@@ -381,6 +381,17 @@ Constants and Dynamic Constants:-
 -->Dynamic constants are nothing changing the values based on certain requirement.
 -->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
 ---------------------------------------------------------------------------------------------------------------------------
-
+Shortcuts:-
+=============
+CDIS--> Clinical Data and Information Scientist
+CDS---> Clinical Data Scientist
+CRA---> Clinical Research Associate
+CDPA--> Clinical Data Programming Associate
+CDA---> Clinical Data SVS Associate/Analyst
+UDMS--> Unified Data Management System
+DIVA--> Data Integrity and Validation Application
+PR----> Peer Review
+PPC---> Post Production Changes
+---------------------------------------------------------------------------------------------------------------------------
 
 
