@@ -120,7 +120,7 @@ Flat Forms:-
 
 Repeating forms:-
 -----------------
--->A form that can be entered multiple times for the same (visit or subject) to capture the repeated events.
+-->A form that can be entered multiple times for the same (visit or subject) to capture the repeated Actions.
 -->example:- adverse events forms
 
 Forms with Repeating Sections:-
@@ -233,6 +233,7 @@ Pre-defined Functions in Expression Builder:-
       -->compare two dates, if two dates are equal then it will return "0".
       -->If First date is before the Second date then it will return "-1".
       -->If first date is after the second date then it will return "+1".
+      -->It will Compare Only Dates not the times.
       -->Eg:- functions._comparedates(date1,date2)
 
 17)functions._getdatedifference():-
@@ -272,6 +273,7 @@ Pre-defined Functions in Expression Builder:-
 
 26)indexOf():-
      -->This function returns the index value of a element in an array.
+     -->Eg:- indexOf("Dolo",["Citrozen","Dolo","Paracetmol"])=1
     
 27)lenght():-
      -->This function returns length of the provided object.
@@ -295,6 +297,8 @@ Pre-defined Functions in Expression Builder:-
 
 33)dateextract(date,units):-
      -->This Methods extracts Months or years or days or minutues or hours from the given date.
+     -->Eg:- dateextract("2026-06-03","d")=3
+      units:- weeks,days,months,hours,minutes,seconds
 
 34)hourunknown(arg1):-
      -->This Function Returns "true" if the Hour fragment is entered as Unknown.
@@ -311,6 +315,10 @@ Pre-defined Functions in Expression Builder:-
 37)monthUnknown(arg1):-
      -->This Function Returns "true" if the month fragment is entered as unknown.
      -->eg:- monthUnknown("2026-UNK-12")=true
+
+38)elementat(arg1,arg2):-
+      -->This Function Returns the element placed at the Provided Position.
+      -->Eg:- elementat([1,2,3],1)=2
 ---------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
@@ -319,8 +327,8 @@ Pre-defined Functions in Expression Builder:-
 ---------------------------------------------------------------------------------------------------------------------------
 Branching Logic:-
 ==================
--->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or froms or across the study's.
--->Nested item will follow the parent child rule but branching logic does not folslow the parent child rule it will directly populate a independent
+-->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or forms or across the study's.
+-->Nested item will follow the parent child rule but branching logic does not follow the parent child rule it will directly populate a independent
    Variable separately.
       -->Traget Item
       -->Expression
@@ -411,6 +419,10 @@ PPC---> Post Production Changes
 DIP---> Data Integration plan(Edits,Deriavtions,Branching Logics, Expressions,etc...)
 SDS---> Study Design  Specification
 SOP---> Standard Operating Procedure
+RSD---> Rule Specification Document
+DRP---> Data Review Plan
+EDS---> Edit Checks and Derivations Specification
+SDIP--> Study Data Integrity Plans
 ---------------------------------------------------------------------------------------------------------------------------
 
 
