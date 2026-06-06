@@ -64,11 +64,16 @@ what is the purpose of "RCC"..?
    
 -->REDCAPCLOUD STRUCTURE:-
 ----------------------------
-   -->what is Study..? --> It is  a combination of Alphabets, study Number and Protocol.
+   -->what is Study..?
+         -->A Study in Clinical Data is a Structured Clinical Trial Where Patient Data is Collected,Managed and 
+            Analyzed to evaluate a Medical Intervention.
+         -->How to Indentify a Study:- It is  a combination of Alphabets, study Number and Protocol.
+
    -->what is Library..?--> It is a Respository where we can copy the forms to Study level.
         Note: we can't able to create or update Instruments(forms) at the study level.
       -->There are two types of Libraries they are core library(25 forms) and efficacy library(300+ froms).
       -->core library contains the most commonly used forms.
+
    -->what is study Template..?-->It contains all the predefined feilds of a forms.
 ---------------------------------------------------------------------------------------------------------------------------
 -->In sandbox go to profile and click on "change Application" -->change application from Redcapcloud EDC to administration.
