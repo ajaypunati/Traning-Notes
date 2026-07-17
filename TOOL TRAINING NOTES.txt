@@ -324,6 +324,10 @@ Pre-defined Functions in Expression Builder:-
 38)elementat(arg1,arg2):-
       -->This Function Returns the element placed at the Provided Position.
       -->Eg:- elementat([1,2,3],1)=2
+
+39)dataseries([arg1,arg2,arg3]):-
+      -->This Function returns an array without the NULL values.
+      -->Eg:- dataseries([1,2,NULL,3,NULL,4]) = [1,2,3,4]
 ---------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
@@ -403,12 +407,25 @@ Study Versions and Migration Plans:-
 -->If we Deploy our Package or study  through study version and if we make any updates to that package those updates will not be visible to the old subjects
    they will visible to the new subjects only.
 -->If we Deploy our package with the help of Migration plan then whatever the updates we did they will be available to both old and new subjects.
+
+ Major Version:-
+ --------------
+ -->If we are adding or modifying the instruments, codelist,items, etc..(i.e if the ASB get Updated) then we need to          create the major version for the study inorder to deploy in to UAT and Production.
+   -->Example:- V1.0 --> here "1.0" refers to major Version.
+
+ Minor Version:-
+ ----------------
+  -->If we are just performing some programming without adding or Modifying the ASB then we can create the minor versions.
+   -->Example:- V1.1 -->here ".1" refers to minor Version.
 ---------------------------------------------------------------------------------------------------------------------------
 Constants and Dynamic Constants:-
 =================================
 -->Constants are nothing but static values.
 -->Dynamic constants are nothing changing the values based on certain requirement.
 -->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
+---------------------------------------------------------------------------------------------------------------------------
+-->After Completing the Development we need to run ->SDS Tool, DIP Tool, Execution Checklist, Study validity Tool (SDD),      Updates Reports, Review Reports and we need to update the UIMS ticket and we need to update the DIVA "Work flow status" 
+   as well.
 ---------------------------------------------------------------------------------------------------------------------------
 Shortcuts:-
 =============
