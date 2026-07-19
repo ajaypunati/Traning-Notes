@@ -1,8 +1,7 @@
 what is our role as a clinical data Associate(Database Analyst 1):-
 ------------------------------------------------------------------
 -->we are going to manage or support the clinical databases in the clinical trails.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like 
-   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
 -->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
 -->Our Main Role is to:
      -->Review and Validate patient data.
@@ -15,12 +14,12 @@ what is our role as a clinical data Associate(Database Analyst 1):-
      -->In this Oracle tool we are having three different Platforms they are:
              1)Central Designer --> Used for Designing the Components.(forms, rules/edit-checks)
              2)Inform EDC(Electronic Data Capture) --> used to deploy and data entry in to EDC.
-             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
+             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in                to DMW.
 
 what is the purpose of "RCC"..?
 ---------------------------------
--->The Purpose of Reda cap cloud is to build EDC for validating the clinical trail data.
----------------------------------------------------------------------------------------------------------------------------
+-->The Purpose of Red cap cloud is to build EDC for validating the clinical trail data.
+-------------------------------------------------------------------------------------------------------------------------------
 -->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
 -->what is meant by Protocol:-It is a combination of, below sentences
        -->what is the study Number..?
@@ -35,47 +34,47 @@ what is the purpose of "RCC"..?
          2)Portfolio or new build --> creating the Studies.
          3)Standard Team --> Managing the forms in a library.
 
--->REDCAPCLOUD ARCHITECHTURE:-
-   =========================
+REDCAPCLOUD ARCHITECHTURE:-
+============================
     -->In Redcap cloud, there are three major components under single URL, they are:
                       1)Study Central --> used for designing the Components
                       2)EDC(Electronic Data Capture) --> used for deployment and data entry
                       3)A&I Platform -->database
-    -->The Environments and Instances in Redcap cloud are:
 
+ENVIRONMENTS AND INSTANCES IN RCC:-
+=======================================
              1) Sandbox Environment(Training Purpose)
 
-                  -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->
+                  -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance--->
                      Production/Execution
 
-                -->In Study Central Instance, It is Composed with two portals or two sub domainss they are Administration portal and Red cap cloud EDC.
-                -->In Administration Portal, we are going to Provide Study Access,Instance Access, Platform Access and Role Permissions,sites.
-                -->In Study Central EDC, we are going to build Activities like Templates,Libraries,Codelists,Clinical Models,SDV,Expressions,many more...                
+                -->In Study Central Instance, It is Composed with two portals or two sub domainss they are Administration                           portal and Red cap cloud EDC.
+                -->In Administration Portal, we are going to Provide Study Access,Instance Access, Platform Access and Role                       Permissions,sites.
+                -->In Study Central EDC, we are going to build Activities like Templates,Libraries,Codelists,Clinical                             Models,SDV,Expressions,many more...                
 
              2) Staging Environment(Application Level Testing)
 
-                   -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
+                   -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance--                                                                                                                   >Production/Execution
 
              3) Production Environment(Reserved for Live Tracking of Clinical Data)
 
-                   -->Study central Instance --> Development Instance(PV Review) -->UAT Instance--->Production/Execution
+                   -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance---                                                                                                                    >Production/Execution
                         
                              (CDMS-sc.pfizer.com, CDMS-dev.pfizer.com, CDMS-UAT.pfizer.com, CDMS-exec.pfizer.com)
-   
--->REDCAPCLOUD STRUCTURE:-
-----------------------------
+-------------------------------------------------------------------------------------------------------------------------------
+REDCAPCLOUD STRUCTURE:-
+========================
    -->what is Study..?
-         -->A Study in Clinical Data is a Structured Clinical Trial Where Patient Data is Collected,Managed and 
-            Analyzed to evaluate a Medical Intervention.
-         -->How to Indentify a Study:- It is  a combination of Alphabets, study Number and Protocol.
+        -->A Study in Clinical Data is a Structured Clinical Trial where patient data is Collected,Managed and Analyzed to Evaluate a Medical Intervention.
+        --> How to Identify a Study:- It is  a combination of Alphabets, study Number and Protocol.
 
    -->what is Library..?--> It is a Respository where we can copy the forms to Study level.
-        Note: we can't able to create or update Instruments(forms) at the study level.
+        Note: we can't able to create Instruments(forms) at the study level.
       -->There are two types of Libraries they are core library(25 forms) and efficacy library(300+ froms).
       -->core library contains the most commonly used forms.
-
+  
    -->what is study Template..?-->It contains all the predefined feilds of a forms.
----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 -->In sandbox go to profile and click on "change Application" -->change application from Redcapcloud EDC to administration.
 -->Then we can see on right corner there is "ADD" button -->it is used to create the study.
 -->we should know to create the study(study name, study category,brief summary, protocol Id,etc..)
@@ -84,9 +83,9 @@ what is the purpose of "RCC"..?
 
 
 CODELISTS:-
------------
+============
 -->In RCC, The Pre-defined values are called as Codelists.
--->In Instruments , go to codelists tab and create codelists by providing the lable and item code.
+-->In Instruments , go to codelists tab and create codelists by providing the item lable and item code.
 -->Once the codelist is done then add it to the instrument variable.
 -->There two types of codelists they are:
       1)Master Codelist:-
@@ -137,29 +136,37 @@ Forms with Fixed Repeating Sections:-
 -------------------------------------
 -->A form that contains a fixed number of repeating sections.
 -->Ex:- Vital signs forms
-
-
-Event Definitions:-
+-------------------------------------------------------------------------------------------------------------------------------
+EVENT DEFINITIONS:-
 ====================
--->Event is nothing but a Visit.
+-->Event is nothing but a Visit.(i.e On what Particular date or day that we need to attend the Clinical Trial)
 -->we are having some of the events like:
-     1)Static Event-->It is mandatory event to add it to the Study level.
+     1)Static Event-->It is mandatory event to add it to the Study/Subject level.
                    -->It does not require any kind of dynamic condition.
-     2)Scheduled Event-->To Add this event to the Study level we need particular dynamic condition.
-     3)Unscheduled Event-->We can add this event to the study level whenever we required.
+     2)Scheduled Event-->To Add this event to the Study/subject level we need particular dynamic condition.
+     3)Unscheduled Event-->We can add this event to the study/Subject level whenever we required.
      4)Parent Event
      5)child Event-->under parent event we need to add this child event and we can add many child events under parent.
         -->We can add forms only inside the child event
-
-Derivations:-
+-------------------------------------------------------------------------------------------------------------------------------
+DERIVATIONS:-
 ===============
 -->Derivations are nothing but deriving the requried values in to the target items based on the conditions.
 (Target Item, Expression, Derivation Title, Derivation Description)
 
+-------------------------------------------------------------------------------------------------------------------------------
+EDIT-CHECKS (OR) QUERY-CHECKS (OR) VALIDATIONS:-
+================================================
+what is meant by Edit Checks..?
+--------------------------------
+-->Edit Checks are nothing but Automated validation Rules programmed in EDC/UDMS System to Identify missing, inconsistent, incorrect or Illogical data at the time of data entry.
 
-Edit-checks or Query Checks or Validations:-
-============================================
--->The Main Aim of Edit-checks or query chekcks is to provide accurate data for the sites.
+What is the Purpose of Edit Checks..?
+----------------------------------------
+-->The Main Aim or purpose of Edit-checks or query checks is to ensure data quality, reduce manual review effort and generate queries to the sites.
+
+Navigations:-
+--------------
        -->Target Event
        -->Target Item
        -->Expression Builder
@@ -168,10 +175,9 @@ Edit-checks or Query Checks or Validations:-
        -->Action
        -->Query Type-->(open query(Visible to sites), issue candidate Query(Visible to Manager level Leads))
        -->Query Category and Query Message
-
-
-Pre-defined Functions in Expression Builder:-
-=============================================
+------------------------------------------------------------------------------------------------------------------------------
+PRE_DEFINED FUNCTIONS IN EXPRESSION BUILDER(RCC):-
+=================================================
 1)"abs()":- 
      -->Return the absolute Value of a Number.
      -->Eg:- abs(arg), abs(-4)=4
@@ -196,155 +202,155 @@ Pre-defined Functions in Expression Builder:-
             empty([])=true
             empty("")=true
 
-7)completed():-
+6)completed():-
     -->Returns true if the given array size is greater than zero otherwise return false.
     -->Eg:- completed([1,2,3])=true
 
-8)concatdlm():-
+7)concatdlm():-
     -->concatenate the given values by using the provided delimiter.
     -->eg:- concatdlm(separator,feild1,field2,field3,..)
             concatdlm("-","one","two")=one-two
 
-9)contains():-
+8)contains():-
     -->Rerutns true if the provided value contains the second value otherwise return false.
     -->Eg:- contains("abc","bc") = true
 
-10)count():-
+9)count():-
     -->Return the Number of elements in the array.
     -->Eg:- count([1,2,3])=3
 
-11)count_values():-
+10)count_values():-
     -->The function counts the number of repetitions of the value in the second argument into an array of values of the first argument.
     -->eg:- count_values(array_values(field),target value)
 
-12)dateadd():-
+11)dateadd():-
     -->add or subtract from the date.
     -->eg:- dateadd(date,units,quantity,dateformat(YYYY-MM_DD))
 
-13)datediff():-
+12)datediff():-
     -->Caluculate difference between the dates or times by using the datediff() function.
     -->eg:- datediff(date1,date2,units,returnsignedvalue,decimalvalues)
              units:- weeks,days,months,hours,minutes,seconds
 
-14)startswith():-
+13)startswith():-
      -->Returns true if the first string starts with the second String otherwise return false.
      -->Eg:- startWith("ABCD","AB")
 
-15)endsWith():-
+14)endsWith():-
      -->Returns true if the first String ends with the second String otherwise return false.
      -->Eg:- endsWith("ABCD","CD");
 
-16)functions._comparedates():-
+15)functions._comparedates():-
       -->compare two dates, if two dates are equal then it will return "0".
       -->If First date is before the Second date then it will return "-1".
       -->If first date is after the second date then it will return "+1".
-      -->It will Compare Only Dates not the times.
+      -->It will compare only the dates not with time.
       -->Eg:- functions._comparedates(date1,date2)
 
-17)functions._getdatedifference():-
+16)functions._getdatedifference():-
       -->Return dates difference between two dates in a specific range.
       -->Eg:- functions._comparedates(date1,date2,"MINUTES"|"HOURS");
 
-18)equals():-
+17)equals():-
       -->Return true if both the objects are equal.
 
-19)hasall():-
+18)hasall():-
      -->This function compares all elements from the collection are equal to the second argument.
      -->Eg:- hasall([3,3,3])=true
 
-20)hasany():-
+19)hasany():-
      -->This function checks if the first argument(collection) contains the second argument.
      -->eg:- hasany([1,2,3],30)=true.
 
-21)min():-
+20)min():-
      -->Return minimum element from the provided array.
      -->Eg:- min([1,2,3])=1
 
-22)max():-
+21)max():-
      -->Return maximum element from the provided array.
      -->Eg:-max([1,2,3])=3
 
-23)mean():-
+22)mean():-
      -->Return avg of the provided array.
      -->Eg:- mean([1,2,3])=2
 
-24)sum():-
+23)sum():-
      -->Return sum of the elements from the Provided array.
      -->sum([1,2,3])=6.
 
-25)sqrt():-
+24)sqrt():-
      -->Returns the perfect positive square root of a number.
      -->sqrt(16)=4
 
-26)indexOf():-
+25)indexOf():-
      -->This function returns the index value of a element in an array.
-     -->Eg:- indexOf("Dolo",["Citrozen","Dolo","Paracetmol"])=1
+     -->Eg:- indexOf("Dolo",["citrozen","Dolo","Paracetmol"])=1
     
-27)lenght():-
+26)lenght():-
      -->This function returns length of the provided object.
      -->Eg:- length([1,2,3])=3
 
-28)todecimal() and todouble():-
+27)todecimal() and todouble():-
      -->Returns double value of provided argument.
      -->Eg:- todecimal("2.23")=2.23
 
-29)toint32():-
+28)toint32():-
      -->Returns long value of the provided argument.
     
-30)toString():-
+29)toString():-
      -->return string value of the provided argument.
  
-31)isnumeric():-
+30)isnumeric():-
      -->returns true if the provided argument is numeric.
 
-32)toupper():-
+31)toupper():-
      -->convert all the lower case characters to the upper case characters.
 
-33)dateextract(date,units):-
+32)dateextract(date,units):-
      -->This Methods extracts Months or years or days or minutues or hours from the given date.
-     -->Eg:- dateextract("2026-06-03","d")=3
-      units:- weeks,days,months,hours,minutes,seconds
+     -->Eg:-dateextract("2026-06-03", "d")
+     units:- weeks,days,months,hours,minutes,seconds
 
-34)hourunknown(arg1):-
+33)hourunknown(arg1):-
      -->This Function Returns "true" if the Hour fragment is entered as Unknown.
      -->eg:- hourunknown("UNK:UNK")=true , hourunknown("UNK:12")=true
 
-35)minuteunknown(arg1):-
+34)minuteunknown(arg1):-
      -->This Function Returns "true" if the minute fragment is entered as Unknown.
      -->eg:- minuteunknown("12:UNK")=true
 
-36)dayUnknown(arg1):-
+35)dayUnknown(arg1):-
      -->This Function Returns "true" if the day fragment is entered as Unknown.
      -->eg:- dayUnknown("2026-03-UNK")=true
 
-37)monthUnknown(arg1):-
+36)monthUnknown(arg1):-
      -->This Function Returns "true" if the month fragment is entered as unknown.
      -->eg:- monthUnknown("2026-UNK-12")=true
 
-38)elementat(arg1,arg2):-
-      -->This Function Returns the element placed at the Provided Position.
-      -->Eg:- elementat([1,2,3],1)=2
+37)elementat(arg1,arg2):-
+     -->This Function Returns element placed at the Provided Position
+     -->Eg:- elementat([1,2,3],1)=2
 
-39)dataseries([arg1,arg2,arg3]):-
-      -->This Function returns an array without the NULL values.
-      -->Eg:- dataseries([1,2,NULL,3,NULL,4]) = [1,2,3,4]
----------------------------------------------------------------------------------------------------------------------------
+38)dataseries(arg1,arg2,arg3,..):-
+      -->This Function Returns the provided array without Null Values.
+      -->dataseries([1,2,3,null,4,null,5])=[1,2,3,4,5]
+-------------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
 -->"n" occurance is not mandatory for the flat form.
 -->"r" occurence is used to find out the duplicate fields entered and populate the query message in all the duplicate forms.
----------------------------------------------------------------------------------------------------------------------------
-Branching Logic:-
+-------------------------------------------------------------------------------------------------------------------------------
+BRANCHING LOGIC:-
 ==================
--->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or forms or across the study's.
--->Nested item will follow the parent child rule but branching logic does not follow the parent child rule it will directly populate a independent
+-->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or froms or across the study's.
+-->Nested item will follow the parent child rule but branching logic does not folslow the parent child rule it will directly populate a independent
    Variable separately.
       -->Traget Item
       -->Expression
       -->Branching Logic Name
       -->Branching Logic Description
----------------------------------------------------------------------------------------------------------------------------
-SDV(Soruce Data Verification):-
+-------------------------------------------------------------------------------------------------------------------------------
+SDV(SOURCE DATA VERIFICATION):-
 ===============================
 -->Soruce Date Verification is a process of checking that the data recorded in trail documents(CRF) matches the source data records or not.
       -->Soruce data= hospital records,blood reports,etc..(CRF)
@@ -360,20 +366,20 @@ SDV(Soruce Data Verification):-
                   -->In Targeted SDv we can see plans and default plans.
                   -->Go and create a plan and add instruments to that plan.
                   -->Now we can see SDV Strategies and create  one SDV Stratergy.
-                  -->Now enroll a new subject and by default it will be in ineligible make it to eligible by using Trigger                      form.
+                  -->Now enroll a new subject and by default it will be in ineligible make it to eligible by using Trigger                          form.
                   -->Now do the data entry.
----------------------------------------------------------------------------------------------------------------------------
-Clinical Models:-
+-------------------------------------------------------------------------------------------------------------------------------
+CLINICAL MODELS:-
 ================
 -->Clinical Models are used to organize the data in a proper Tabular Forms.
--->All the Tabular forms what we created s will be under one universal Data Model Nothing SRDM(Standard Review Data Model)
+-->All the Tabular forms what we created will be under one universal Data Model Nothing SRDM(Standard Review Data Model)
 -->Navigations:-
     -->Study Level
     -->Clinical Models
     -->Tables(create table and variables)
     -->Mapping defintions
     -->Common Variables--->Itemrefname,Formrefname
--->Soruces:- CRF ,Non-CRF
+-->Soruces:- CRF,Non-CRF
 -->SRDM stands for Standard Review Data Model.
 -->Extened Attributes:-
      -->AETERM(text) -->AETERM_ND(not done)
@@ -384,8 +390,27 @@ Clinical Models:-
      -->AESCAT(codelist)
            -->AESCAT_ND
            -->AESCAT_C(store Item code)
----------------------------------------------------------------------------------------------------------------------------
-Dynamic Expressions:-
+-------------------------------------------------------------------------------------------------------------------------------
+CLINICAL MODEL CHECKS(CMC):-
+===========================
+What is meant by CMC..?
+------------------------
+ -->Clinical Model Checks are nothing  but Automated Data Validation checks used in Clinical Data Management to identify          missing data, inconsistencies and safety issues across the clinical study Data.
+ 
+what is the Purpose of CMC..?
+-----------------------------
+-->The Main Purpose of CMC is to ensure Data Quality, reduce manual review effort and Generate querys to the site.
+
+Components of CMC..?
+---------------------
+-->Source Form
+-->Source Feild
+-->Target Form
+-->Target Field
+-->Condition Logic
+-->Query Message
+-------------------------------------------------------------------------------------------------------------------------------
+DYNAMIC EXPRESSIONS:-
 =====================
 -->Dynamic Expressions are used to trigger the events (or) instruments based on certain conditions.
 -->There are three types of Dynamic Expressions in RCC they are:
@@ -401,8 +426,8 @@ Dynamic Expressions:-
                    -->create dependent Event
                    -->Create Dynamic Event
                    -->Add Instrument
----------------------------------------------------------------------------------------------------------------------------
-Study Versions and Migration Plans:-
+-------------------------------------------------------------------------------------------------------------------------------
+STUDY VERSION AND MIGRATION PLANS:-
 ====================================
 -->If we Deploy our Package or study  through study version and if we make any updates to that package those updates will not be visible to the old subjects
    they will visible to the new subjects only.
@@ -410,41 +435,42 @@ Study Versions and Migration Plans:-
 
  Major Version:-
  --------------
- -->If we are adding or modifying the instruments, codelist,items, etc..(i.e if the ASB get Updated) then we need to          create the major version for the study inorder to deploy in to UAT and Production.
+   -->If we are adding or modifying the instruments, codelist,items, etc..(if the ASB get Updated) then we need to create the major version for the study 
+      inorder to deploy in to UAT and Production.
    -->Example:- V1.0 --> here "1.0" refers to major Version.
-
+  
  Minor Version:-
- ----------------
-  -->If we are just performing some programming without adding or Modifying the ASB then we can create the minor versions.
+ ---------------
+   -->If we are just performing some programming without adding or Modifying the ASB then we can create the minor versions.
    -->Example:- V1.1 -->here ".1" refers to minor Version.
----------------------------------------------------------------------------------------------------------------------------
-Constants and Dynamic Constants:-
+-------------------------------------------------------------------------------------------------------------------------------
+CONSTANTS AND DYNAMIC CONSTANTS:-
 =================================
--->Constants are nothing but static values.
+-->Constants are nothing but static values.(they will be fixed until and unless we modify)
 -->Dynamic constants are nothing changing the values based on certain requirement.
 -->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
----------------------------------------------------------------------------------------------------------------------------
--->After Completing the Development we need to run ->SDS Tool, DIP Tool, Execution Checklist, Study validity Tool (SDD),      Updates Reports, Review Reports and we need to update the UIMS ticket and we need to update the DIVA "Work flow status" 
-   as well.
----------------------------------------------------------------------------------------------------------------------------
-Shortcuts:-
-=============
+-------------------------------------------------------------------------------------------------------------------------------
+-->After Completing the Development we need to run ->SDS Tool, DIP Tool, Execution Checklist, Study validity Tool (SDD), Updates Reports, Review Reports, Peer Review Log
+-------------------------------------------------------------------------------------------------------------------------------
 CDIS--> Clinical Data and Information Scientist
 CDS---> Clinical Data Scientist
 CRA---> Clinical Research Associate
 CDPA--> Clinical Data Programming Associate
 CDA---> Clinical Data SVS Associate/Analyst
-UDMS--> Unified Data Management System
+UDMS--> Unified Data Management Solution
 DIVA--> Data Integrity and Validation Application
 PR----> Peer Review
 PPC---> Post Production Changes
-DIP---> Data Integration plan(Edits,Deriavtions,Branching Logics, Expressions,etc...)
-SDS---> Study Design  Specification
+DIP---> Data Integration Plan(Edits,Branching logics,Derivations,
+SDS---> Study Design Specification
 SOP---> Standard Operating Procedure
 RSD---> Rule Specification Document
+EDS---> Edit Checks and Derivation Specifications
 DRP---> Data Review Plan
-EDS---> Edit Checks and Derivations Specification
 SDIP--> Study Data Integrity Plans
----------------------------------------------------------------------------------------------------------------------------
+ASB -->Annotated Study Book
+-------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
