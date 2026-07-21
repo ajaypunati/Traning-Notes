@@ -99,8 +99,8 @@ Steps for creating Instruments,codelists, event definitions and data entry:-
 ============================================================================
 -->First Go to created study.
 -->Go to instrument field and enter instrument name(mdes_form_name), instrument title and description.
--->After that go to instrument variables and add section or group by entering the section name(meds_section_name) and title Name.
--->After that go to create varible field and select variable type(Control type), label Name, variable name(item_refname), title.
+-->After that go to instrument variables and add section or group by entering the section name(meds_section_name) and title       Name.
+-->After that go to create varible field and select variable type(Control type), label Name, variable name(item_refname),         title.
 -->If the variable control type is Radio/Dropdown then Go and create the codelists.(item lable and item code)
 -->After that add that codelist to the Instrument variable.
 -->while creating the variables we need to follow the sequence and check for mde_is_required as "YES".
@@ -110,8 +110,8 @@ Steps for creating Instruments,codelists, event definitions and data entry:-
 -->Save and exit that's all.
 
 
-TYPES OF FORMS:-
------------------
+TYPES OF FORMS/INSTRUMENTS:-
+================================
 -->Flat forms(eg:-SV001,DM001)
 -->Repeating Forms(eg:-AE001)
 -->Forms with repeating logs/sections
@@ -148,6 +148,12 @@ EVENT DEFINITIONS:-
      4)Parent Event
      5)child Event-->under parent event we need to add this child event and we can add many child events under parent.
         -->We can add forms only inside the child event
+
+-->Components:-
+   ----------
+      -->Event title, Description, Day Schedule, Max Repeating allowed, Day MIN, Day MAX, Unique event title, Category,Active
+
+-->If we are making any form as Repeating then one separate label will be populated that is nothing but "Custom Instrument Label".
 -------------------------------------------------------------------------------------------------------------------------------
 DERIVATIONS:-
 ===============
