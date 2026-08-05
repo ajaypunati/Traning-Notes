@@ -1,76 +1,76 @@
-what is our role as a clinical data Associate(Database Analyst 1):-
+what is our role as a clinical data Associate (Database Analyst 1):-
 ------------------------------------------------------------------
--->we are going to manage or support the clinical databases in the clinical trails.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-ordinators will collect the participant info like (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
--->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate,complete and safe for analysis.
+-->we are going to manage or support the clinical databases in the clinical trials.
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-Ordinator's will collect the participant info like 
+   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate, complete and safe for analysis.
 -->Our Main Role is to:
-     -->Review and Validate patient data.
-     -->Identify errors and raise query's.
+     -->Review and validate patient data.
+     -->Identify errors and raise queries.
      -->Monitor Adverse Events.
      -->clean and finalize data for Analysis.
 
 -->The Current Tool we are using in DBM is "RED CAP CLOUD(RCC)".
 -->The Previous Tool is "ORACLE".
      -->In this Oracle tool we are having three different Platforms they are:
-             1)Central Designer --> Used for Designing the Components.(forms, rules/edit-checks)
-             2)Inform EDC(Electronic Data Capture) --> used to deploy and data entry in to EDC.
-             3)DMW(Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in                to DMW.
+             1)Central Designer --> Used for Designing the Components. (forms, rules/edit-checks)
+             2)Inform EDC (Electronic Data Capture) --> used to deploy and data entry into EDC.
+             3)DMW (Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
 
-what is the purpose of "RCC"..?
+what is the purpose of "RCC"...?
 ---------------------------------
--->The Purpose of Red cap cloud is to build EDC for validating the clinical trail data.
+-->The Purpose of Red cap cloud is to build EDC for validating the clinical trial data.
 -------------------------------------------------------------------------------------------------------------------------------
--->While Designing Components(forms, rules/Edit-checks) We are having some of the control types like Text field , Date and mail, Radio Buttons.
--->what is meant by Protocol:-It is a combination of, below sentences
-       -->what is the study Number..?
-       -->who is the patient..?
-       -->Number of patient's..?
+-->While Designing Components (forms, rules/Edit-checks) We are having some of the control types like Text field, Date and mail, Radio Buttons.
+-->what is meant by Protocol: -It is a combination of, below sentences
+       -->what is the study Number...?
+       -->who is the patient...?
+       -->Number of patient's...?
        -->Criteria
        -->visits
        -->Drug Information
 
--->In Red Cap Cloud(RCC), we are going to work on three things they are:
+-->In Red Cap Cloud (RCC), we are going to work on three things they are:
          1)Migration -->Transferring data from Oracle to red cap cloud
          2)Portfolio or new build --> creating the Studies.
          3)Standard Team --> Managing the forms in a library.
 
-REDCAPCLOUD ARCHITECHTURE:-
+REDCAPCLOUD ARCHITECHTURE: -
 ============================
     -->In Redcap cloud, there are three major components under single URL, they are:
                       1)Study Central --> used for designing the Components
-                      2)EDC(Electronic Data Capture) --> used for deployment and data entry
+                      2)EDC (Electronic Data Capture) --> used for deployment and data entry
                       3)A&I Platform -->database
+    -->The Environments and Instances in Redcap cloud are:
 
-ENVIRONMENTS AND INSTANCES IN RCC:-
-=======================================
-             1) Sandbox Environment(Training Purpose)
+             1) Sandbox Environment (Training Purpose)
 
-                  -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance--->
+                  -->Study central Instance --> Development Instance (Peer Review, Pipeline) -->UAT Instance--->
                      Production/Execution
 
-                -->In Study Central Instance, It is Composed with two portals or two sub domainss they are Administration                           portal and Red cap cloud EDC.
-                -->In Administration Portal, we are going to Provide Study Access,Instance Access, Platform Access and Role                       Permissions,sites.
-                -->In Study Central EDC, we are going to build Activities like Templates,Libraries,Codelists,Clinical                             Models,SDV,Expressions,many more...                
+                -->In Study Central Instance, it is Composed with two portals or two sub domains they are Administration                         portal and red cap cloud EDC.
+                -->In Administration Portal, we are going to Provide Study Access, Instance Access, Platform Access and Role                      Permissions, sites.
+                -->In Study Central EDC, we are going to build Activities like Templates, Libraries, Code lists, Clinical                             Models, SDV, Expressions, many more...                
 
              2) Staging Environment(Application Level Testing)
 
-                   -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance--                                                                                                                   >Production/Execution
+                   -->Study central Instance --> Development Instance (Peer Review, Pipeline) -->UAT Instance---                                                                                                                     >Production/Execution
 
-             3) Production Environment(Reserved for Live Tracking of Clinical Data)
+             3) Production Environment (Reserved for Live Tracking of Clinical Data)
 
-                   -->Study central Instance --> Development Instance(Peer Review,Pipe-line) -->UAT Instance---                                                                                                                    >Production/Execution
+                   -->Study central Instance --> Development Instance (Peer Review, Pipeline) -->UAT Instance---                                                                                                                     >Production/Execution
                         
                              (CDMS-sc.pfizer.com, CDMS-dev.pfizer.com, CDMS-UAT.pfizer.com, CDMS-exec.pfizer.com)
--------------------------------------------------------------------------------------------------------------------------------
+   
 REDCAPCLOUD STRUCTURE:-
 ========================
    -->what is Study..?
-        -->A Study in Clinical Data is a Structured Clinical Trial where patient data is Collected,Managed and Analyzed to Evaluate a Medical Intervention.
-        --> How to Identify a Study:- It is  a combination of Alphabets, study Number and Protocol.
+        -->A Study in Clinical Data is a Structured Clinical Trial where patient data is Collected, Managed and Analyzed to                Evaluate a Medical Intervention.
+        --> How to Identify a Study: - It is a combination of Alphabets, study Number and Protocol.
 
-   -->what is Library..?--> It is a Respository where we can copy the forms to Study level.
-        Note: we can't able to create Instruments(forms) at the study level.
-      -->There are two types of Libraries they are core library(25 forms) and efficacy library(300+ froms).
+   -->what is Library...? --> It is a Repository where we can copy the forms to Study level.
+        Note: we can't be able to create Instruments(forms) at the study level.
+      -->There are two types of Libraries they are core library (25 forms) and efficacy library(300+ froms).
       -->core library contains the most commonly used forms.
   
    -->what is study Template..?-->It contains all the predefined feilds of a forms.
@@ -99,8 +99,8 @@ Steps for creating Instruments,codelists, event definitions and data entry:-
 ============================================================================
 -->First Go to created study.
 -->Go to instrument field and enter instrument name(mdes_form_name), instrument title and description.
--->After that go to instrument variables and add section or group by entering the section name(meds_section_name) and title       Name.
--->After that go to create varible field and select variable type(Control type), label Name, variable name(item_refname),         title.
+-->After that go to instrument variables and add section or group by entering the section name(meds_section_name) and title Name.
+-->After that go to create varible field and select variable type(Control type), label Name, variable name(item_refname), title.
 -->If the variable control type is Radio/Dropdown then Go and create the codelists.(item lable and item code)
 -->After that add that codelist to the Instrument variable.
 -->while creating the variables we need to follow the sequence and check for mde_is_required as "YES".
@@ -111,7 +111,7 @@ Steps for creating Instruments,codelists, event definitions and data entry:-
 
 
 TYPES OF FORMS/INSTRUMENTS:-
-================================
+-----------------------------
 -->Flat forms(eg:-SV001,DM001)
 -->Repeating Forms(eg:-AE001)
 -->Forms with repeating logs/sections
@@ -136,7 +136,8 @@ Forms with Fixed Repeating Sections:-
 -------------------------------------
 -->A form that contains a fixed number of repeating sections.
 -->Ex:- Vital signs forms
--------------------------------------------------------------------------------------------------------------------------------
+
+
 EVENT DEFINITIONS:-
 ====================
 -->Event is nothing but a Visit.(i.e On what Particular date or day that we need to attend the Clinical Trial)
@@ -154,18 +155,20 @@ EVENT DEFINITIONS:-
       -->Event title, Description, Day Schedule, Max Repeating allowed, Day MIN, Day MAX, Unique event title, Category,Active
 
 -->If we are making any form as Repeating then one separate label will be populated that is nothing but "Custom Instrument Label".
--------------------------------------------------------------------------------------------------------------------------------
+
+
 DERIVATIONS:-
 ===============
 -->Derivations are nothing but deriving the requried values in to the target items based on the conditions.
-(Target Item, Expression, Derivation Title, Derivation Description)
+  (Target Item, Expression, Derivation Title, Derivation Description)
 
--------------------------------------------------------------------------------------------------------------------------------
+
 EDIT-CHECKS (OR) QUERY-CHECKS (OR) VALIDATIONS:-
 ================================================
 what is meant by Edit Checks..?
 --------------------------------
--->Edit Checks are nothing but Automated validation Rules programmed in EDC/UDMS System to Identify missing, inconsistent, incorrect or Illogical data at the time of data entry.
+-->Edit Checks are nothing but Automated validation Rules programmed in EDC/UDMS System to Identify missing, inconsistent, incorrect or Illogical data 
+   at the time of data entry.
 
 What is the Purpose of Edit Checks..?
 ----------------------------------------
@@ -181,7 +184,8 @@ Navigations:-
        -->Action
        -->Query Type-->(open query(Visible to sites), issue candidate Query(Visible to Manager level Leads))
        -->Query Category and Query Message
-------------------------------------------------------------------------------------------------------------------------------
+
+
 PRE_DEFINED FUNCTIONS IN EXPRESSION BUILDER(RCC):-
 =================================================
 1)"abs()":- 
@@ -348,17 +352,16 @@ PRE_DEFINED FUNCTIONS IN EXPRESSION BUILDER(RCC):-
 -------------------------------------------------------------------------------------------------------------------------------
 BRANCHING LOGIC:-
 ==================
--->It is a dynamic condition which is used to trigger the items based on the condition wihtin the evenst or froms or across the study's.
--->Nested item will follow the parent child rule but branching logic does not folslow the parent child rule it will directly populate a independent
-   Variable separately.
-      -->Traget Item
+-->It is a dynamic condition which is used to trigger the items based on the condition within the events or forms or across the studies.
+-->Nested item will follow the parent child rule, but branching logic does not follow the parent child rule it will directly populate an independent Variable separately.
+      -->Target Item
       -->Expression
       -->Branching Logic Name
       -->Branching Logic Description
 -------------------------------------------------------------------------------------------------------------------------------
-SDV(SOURCE DATA VERIFICATION):-
+SDV (SOURCE DATA VERIFICATION): -
 ===============================
--->Soruce Date Verification is a process of checking that the data recorded in trail documents(CRF) matches the source data records or not.
+-->Source Date Verification is a process of checking that the data recorded in trail documents (ECRF) matches the source data records or not.
       -->Soruce data= hospital records,blood reports,etc..(CRF)
       -->Trail document(CRF) = where trail data is entered(electronic system).
 -->The Main Purpose of SDV is to ensure accuracy,completeness and reliability of trail data.
@@ -399,24 +402,24 @@ CLINICAL MODELS:-
 -------------------------------------------------------------------------------------------------------------------------------
 CLINICAL MODEL CHECKS(CMC):-
 ===========================
-What is meant by CMC..?
+What is meant by CMC...?
 ------------------------
- -->Clinical Model Checks are nothing  but Automated Data Validation checks used in Clinical Data Management to identify          missing data, inconsistencies and safety issues across the clinical study Data.
+ -->Clinical Model Checks are nothing, but Automated Data Validation checks used in Clinical Data Management to identify missing data, inconsistencies and safety issues across the clinical study Data.
  
-what is the Purpose of CMC..?
+what is the Purpose of CMC...?
 -----------------------------
 -->The Main Purpose of CMC is to ensure Data Quality, reduce manual review effort and Generate querys to the site.
 
-Components of CMC..?
+Components of CMC...?
 ---------------------
 -->Source Form
--->Source Feild
+-->Source Field
 -->Target Form
 -->Target Field
 -->Condition Logic
 -->Query Message
 -------------------------------------------------------------------------------------------------------------------------------
-DYNAMIC EXPRESSIONS:-
+DYNAMIC EXPRESSIONS: -
 =====================
 -->Dynamic Expressions are used to trigger the events (or) instruments based on certain conditions.
 -->There are three types of Dynamic Expressions in RCC they are:
@@ -433,19 +436,17 @@ DYNAMIC EXPRESSIONS:-
                    -->Create Dynamic Event
                    -->Add Instrument
 -------------------------------------------------------------------------------------------------------------------------------
-STUDY VERSION AND MIGRATION PLANS:-
+STUDY VERSION AND MIGRATION PLANS: -
 ====================================
--->If we Deploy our Package or study  through study version and if we make any updates to that package those updates will not be visible to the old subjects
-   they will visible to the new subjects only.
--->If we Deploy our package with the help of Migration plan then whatever the updates we did they will be available to both old and new subjects.
+-->If we Deploy our Package or study through study version and if we make any updates to that package those updates will not be visible to the old subjects they will be visible to the new subjects only.
+-->If we Deploy our package with the help of Migration plan then whatever the updates, we did they will be available to both old and new subjects.
 
- Major Version:-
+ Major Version: -
  --------------
-   -->If we are adding or modifying the instruments, codelist,items, etc..(if the ASB get Updated) then we need to create the major version for the study 
-      inorder to deploy in to UAT and Production.
-   -->Example:- V1.0 --> here "1.0" refers to major Version.
+   -->If we are adding or modifying the instruments, code list, items, etc... (if the ASB get Updated) then we need to create the major version for the study in order to deploy into UAT and Production.
+   -->Example: - V1.0 --> here "1.0" refers to major Version.
   
- Minor Version:-
+ Minor Version: -
  ---------------
    -->If we are just performing some programming without adding or Modifying the ASB then we can create the minor versions.
    -->Example:- V1.1 -->here ".1" refers to minor Version.
@@ -456,7 +457,7 @@ CONSTANTS AND DYNAMIC CONSTANTS:-
 -->Dynamic constants are nothing changing the values based on certain requirement.
 -->The Main Agenda of Constants and Dynamic Constants is to reuse them at anywhere and anytime.(Reusability)
 -------------------------------------------------------------------------------------------------------------------------------
--->After Completing the Development we need to run ->SDS Tool, DIP Tool, Execution Checklist, Study validity Tool (SDD), Updates Reports, Review Reports, Peer Review Log
+-->After Completing the Development we need to run ->SDS Tool, DIP Tool, Execution Checklist, Study validity Tool (SDD), Updates Reports, Review Reports
 -------------------------------------------------------------------------------------------------------------------------------
 CDIS--> Clinical Data and Information Scientist
 CDS---> Clinical Data Scientist
@@ -474,7 +475,11 @@ RSD---> Rule Specification Document
 EDS---> Edit Checks and Derivation Specifications
 DRP---> Data Review Plan
 SDIP--> Study Data Integrity Plans
-ASB -->Annotated Study Book
+ASB --> Annotated Study Book
+DBA --> Database Activation
+FSFV--> First Subject First Visit
+LSLV--> Last subject Last Visit
+FAP---> Final Approved Protocol
 -------------------------------------------------------------------------------------------------------------------------------
 
 
