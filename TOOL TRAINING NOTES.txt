@@ -344,6 +344,10 @@ PRE_DEFINED FUNCTIONS IN EXPRESSION BUILDER(RCC):-
 38)dataseries(arg1,arg2,arg3,..):-
       -->This Function Returns the provided array without Null Values.
       -->dataseries([1,2,3,null,4,null,5])=[1,2,3,4,5]
+
+39)selected(array_values,arg1):-
+      -->This function returns true if the provided array contains the value to check.
+      -->Example:- selected([1,2,3,4],3)=true.
 -------------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
