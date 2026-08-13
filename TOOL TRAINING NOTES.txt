@@ -442,18 +442,43 @@ DYNAMIC EXPRESSIONS: -
 -------------------------------------------------------------------------------------------------------------------------------
 STUDY VERSION AND MIGRATION PLANS: -
 ====================================
--->If we Deploy our Package or study through study version and if we make any updates to that package those updates will not be visible to the old subjects they will be visible to the new subjects only.
--->If we Deploy our package with the help of Migration plan then whatever the updates, we did they will be available to both old and new subjects.
+Study Version:-
+---------------
+-->After Creating the study version and deploying in to DEV and again if we make any changes to the study or package then whatever the updates we have done those will be visible to new subjects dev but not visible to Old Subjects.
 
- Major Version: -
- --------------
-   -->If we are adding or modifying the instruments, code list, items, etc... (if the ASB get Updated) then we need to create the major version for the study in order to deploy into UAT and Production.
-   -->Example: - V1.0 --> here "1.0" refers to major Version.
-  
- Minor Version: -
- ---------------
-   -->If we are just performing some programming without adding or Modifying the ASB then we can create the minor versions.
-   -->Example:- V1.1 -->here ".1" refers to minor Version.
+Format For Creating Study Versions:
+------------------------------------
+V<major version><minor version><Revision>
+  Ex:- V.2.1.0
+
+Major Version:-
+---------------
+-->Major Version needs to be increased only when deploying to UAT and only if the change that is being implemented in that study version does involves CRF changes. 
+
+Minor Version:-
+---------------
+-->Minor Version needs to be increased only when deploying to UAT and only if the change that is being implemented in that study version does not involve CRF changes.
+
+Revision Version:-
+------------------
+-->The study version revision number need to be increased by one every time during our development process we need a version to deploy to Dev.
+-->Note that revision number needs to be dropped when deploying to UAT.(V5.2)
+
+Migration Plan:-
+----------------
+-->If we are deploying our Package with the help of migration then whatever the updates we have done to the study version those will be visible to both 
+   new subject and old subjects in dev as well.
+-->We need to use the Migration Plan after Round 1 UAT only.
+
+Format for Creating Migration Plan:-
+------------------------------------
+--->If our target Instance is DEV then create,
+     MP<latest Study version in DEV> to <new study Version>
+
+-->If our target Instance is UAT the create,
+     MP<latest study version in DEV> to <new Study Version>
+     MP<latest study version in UAT> to <new study version>
+     MP<latest study version in PROD>to <new study version>
 -------------------------------------------------------------------------------------------------------------------------------
 CONSTANTS AND DYNAMIC CONSTANTS:-
 =================================
