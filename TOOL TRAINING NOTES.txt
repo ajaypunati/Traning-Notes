@@ -1,10 +1,9 @@
 what is our role as a clinical data Associate (Database Analyst 1):-
 ------------------------------------------------------------------
 -->we are going to manage or support the clinical databases in the clinical trials.
--->when a clinical Trail is performing, the Investigators or clinical Data Co-Ordinator's will collect the participant info like 
-   (Name,Temp,BP,Weight,start date,end date,drug info,Number of visits,dosage,etc...)
+-->when a clinical Trail is performing, the Investigators or clinical Data Co-Ordinator's will collect the participant info like (Name,Temp,BP,Weight,start date, end date, drug info, Number of visits,dosage,etc...)
 -->As a Clinical Data SVS Associate, we ensure that clinical trial data is accurate, complete and safe for analysis.
--->Our Main Role is to:
+-->Our Main Role in the Process of clinical is to:
      -->Review and validate patient data.
      -->Identify errors and raise queries.
      -->Monitor Adverse Events.
@@ -15,7 +14,7 @@ what is our role as a clinical data Associate (Database Analyst 1):-
      -->In this Oracle tool we are having three different Platforms they are:
              1)Central Designer --> Used for Designing the Components. (forms, rules/edit-checks)
              2)Inform EDC (Electronic Data Capture) --> used to deploy and data entry into EDC.
-             3)DMW (Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data in to DMW.
+             3)DMW (Data Management Workbench) --> Once the data is entered or deployed then we are going to store that data                  into DMW.
 
 what is the purpose of "RCC"...?
 ---------------------------------
@@ -32,7 +31,7 @@ what is the purpose of "RCC"...?
 
 -->In Red Cap Cloud (RCC), we are going to work on three things they are:
          1)Migration -->Transferring data from Oracle to red cap cloud
-         2)Portfolio or new build --> creating the Studies.
+         2)Portfolio or new build --> creating the Studies. (Study Build team)
          3)Standard Team --> Managing the forms in a library.
 
 REDCAPCLOUD ARCHITECHTURE: -
@@ -70,32 +69,25 @@ REDCAPCLOUD STRUCTURE:-
 
    -->what is Library...? --> It is a Repository where we can copy the forms to Study level.
         Note: we can't be able to create Instruments(forms) at the study level.
-      -->There are two types of Libraries they are core library (25 forms) and efficacy library(300+ froms).
+      -->There are two types of Libraries they are core library (25 forms) and efficacy library (300+ forms).
       -->core library contains the most commonly used forms.
   
-   -->what is study Template..?-->It contains all the predefined feilds of a forms.
-----------------------------------------------------------------------------------------------------------------------------
--->In sandbox go to profile and click on "change Application" -->change application from Redcapcloud EDC to administration.
--->Then we can see on right corner there is "ADD" button -->it is used to create the study.
--->we should know to create the study(study name, study category,brief summary, protocol Id,etc..)
--->we should know how to create sites and provide roles to the user.
--->we should know how to create instruments and how to copy instruments from library to study level.
-
-
-CODELISTS:-
+   -->what is study Template...? -->It contains all the predefined fields of a forms.
+-------------------------------------------------------------------------------------------------------------------------------
+CODELISTS: -
 ============
--->In RCC, The Pre-defined values are called as Codelists.
--->In Instruments , go to codelists tab and create codelists by providing the item lable and item code.
--->Once the codelist is done then add it to the instrument variable.
+-->In RCC, The Pre-defined values are called as Code lists.
+-->In Instruments, go to code lists tab and create code lists by providing the item label and item code.
+-->Once the code list is done then add it to the instrument variable.
 -->There two types of codelists they are:
-      1)Master Codelist:-
-             -->The Master codelist is a comprehensive list that contains all the terms/Codes of a particular data element.
-      2)Subset Codelist:-
-             -->The subset codelist is derived from master codelist that contains only the specific data element codes/Terms.
-             -->Unique subset codelist and Linked Subset Codelist.
+      1)Master Code list:-
+             -->The Master code list is a comprehensive list that contains all the terms/Codes of a particular data element.
+      2)Subset Code list:-
+             -->The subset code list is derived from master code list that contains only the specific data element codes/Terms.
+             -->Unique subset code list and Linked Subset Code list.
 
 
-Steps for creating Instruments,codelists, event definitions and data entry:-
+Steps for creating Instruments,codelists, event definitions and data entry: -
 ============================================================================
 -->First Go to created study.
 -->Go to instrument field and enter instrument name(mdes_form_name), instrument title and description.
