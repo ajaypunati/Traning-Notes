@@ -340,6 +340,12 @@ PRE_DEFINED FUNCTIONS IN EXPRESSION BUILDER(RCC):-
 39)selected(array_values,arg1):-
       -->This function returns true if the provided array contains the value to check.
       -->Example:- selected([1,2,3,4],3)=true.
+
+40)Functions.mindate(date1,date2):-
+      -->This function return  the minimum of two dates.
+             -->If first date is before the second date then it will return date1.
+             -->If first date is after the second date then it will return the date2.
+      -->Example: Functions.mindate(02-Aug-2026,01-Aug-2026)=01-Aug-2026
 -------------------------------------------------------------------------------------------------------------------------------
 -->"n" occurence is used to refresh the data in the background as soon as the data is updated or modified in the different visits.
 -->"n" occurance is mandatory for the repeating forms and repeating logs.
